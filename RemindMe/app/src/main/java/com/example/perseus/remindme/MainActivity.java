@@ -11,10 +11,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
+import com.example.perseus.remindme.adapter.TabPagerFragmentAdapter;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final int LAYOUT = R.layout.activity_main;
+
     private Toolbar toolbar;
-    private TabLayout tablayout;
+    private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initToolbar();
+        initTabs();
+
     }
 
     private void initToolbar() {
@@ -36,4 +43,18 @@ public class MainActivity extends AppCompatActivity {
         });
         toolbar.inflateMenu(R.menu.menu);
     }
+
+    private void initTabs() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        TabPagerFragmentAdapter adapter = new TabPagerFragmentAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        TabLayout tablayout = findViewById(R.id.tablayout);
+        tablayout.setupWithViewPager(viewPager);
+    }
+
+    private void showNotificationTab(){
+        viewPager.setCurrentItem(Constants.TAB_ONE);
+
+    }
 }
+
