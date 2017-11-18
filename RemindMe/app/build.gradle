@@ -28,4 +28,10 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.1'
     implementation 'com.android.support:appcompat-v7:27.0.1'
     implementation 'com.android.support:design:27.0.1'
-}
+    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}}

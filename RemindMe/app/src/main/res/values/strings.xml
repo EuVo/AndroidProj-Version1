@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RemindMe</string>
+    <string name="app_name">Расписание занятий</string>
     <string name="search_title">Search</string>
     <string name="day_monday">Monday</string>
     <string name="DMON">ПН</string>

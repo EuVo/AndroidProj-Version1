@@ -11,6 +11,7 @@ public class AbstractTabFragment extends Fragment {
 
     protected Context context;
     protected View view;
+    protected View views;
 
     public String getTitle() {
         return title;
