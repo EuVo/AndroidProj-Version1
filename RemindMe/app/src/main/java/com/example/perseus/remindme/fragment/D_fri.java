@@ -1,5 +1,6 @@
 package com.example.perseus.remindme.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,16 +11,16 @@ import android.view.ViewGroup;
 
 import com.example.perseus.remindme.R;
 
-public class ExampleFragment extends Fragment{
+public class D_fri extends AbstractTabFragment{
 
-    private static final int LAYOUT = R.layout.monday;
+    private static final int LAYOUT = R.layout.friday;
 
-    private View view;
-
-    public static ExampleFragment getInstance(){
+    public static D_fri getInstance(Context context){
         Bundle args = new Bundle();
-        ExampleFragment fragment = new ExampleFragment();
+        D_fri fragment = new D_fri();
         fragment.setArguments(args);
+        fragment.setContext(context);
+        fragment.setTitle(context.getString(R.string.DFRI));
 
         return fragment;
     }
@@ -33,5 +34,9 @@ public class ExampleFragment extends Fragment{
 
 
         return view;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
     }
 }

@@ -2,4 +2,10 @@
     <string name="app_name">RemindMe</string>
     <string name="search_title">Search</string>
     <string name="day_monday">Monday</string>
+    <string name="DMON">ПН</string>
+    <string name="DTUE">ВТ</string>
+    <string name="DWEN">СР</string>
+    <string name="DTHU">ЧТ</string>
+    <string name="DFRI">ПТ</string>
+    <string name="DSAT">СБ</string>
 </resources>

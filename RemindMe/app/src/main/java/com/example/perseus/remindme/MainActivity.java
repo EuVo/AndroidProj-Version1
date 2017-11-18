@@ -1,9 +1,6 @@
 package com.example.perseus.remindme;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.graphics.Color;
-import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
-import com.example.perseus.remindme.adapter.TabPagerFragmentAdapter;
+import com.example.perseus.remindme.adapter.TabsFragmentAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabPagerFragmentAdapter adapter = new TabPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         TabLayout tablayout = findViewById(R.id.tablayout);
         tablayout.setupWithViewPager(viewPager);
